@@ -58,6 +58,9 @@ count(A^B, R) :- count(A,Ra), count(B,Rb), R is Ra + Rb + 1.
 count(A+B, R) :- count(A,Ra), count(B,Rb), R is Ra + Rb + 1.
 count(A*, R)  :- count(A,Ra), R is Ra + 1.
 
+% Question 4: testRE/2
+
+% Test examples for question 4
 exampleRE(t1, [a,a,b,a,a,a,a,b]  , (a^a+b)*).
 exampleRE(t2, [a,a,b,a,a,a,a,a,b], (a^a+b)*).
 exampleRE(t3, [a,a,a,a,a]        , (a+a^a)^(a^a^a)*).
@@ -70,8 +73,10 @@ exampleRE(t9, [b]                , (a^b)* ^b).
 exampleRE(t10,[a,b,b,b,b,a,c]    , a^b* ^b^a^c).
 exampleRE(t11,[a,b,a,b,a,b]      , (a^b)*).
 
-% Question 4: testRE/2
+% splitNonEmpty/3 Splits list A in non-empty list A1 and (possibly empty) list A2
 splitNonEmpty(A, A1, A2) :- append(A1, A2, A), not(A1 == []).
+
+% testRE/2
 testRE([A],A) :- atom(A).
 testRE([],_*).
 testRE(W,A+_) :- testRE(W,A).
