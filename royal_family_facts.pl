@@ -15,7 +15,8 @@ mother(maxima,amalia).
 mother(maxima,alexia).
 mother(maxima,ariane).
 
-mother(amalia, maxima).
+% aftekenen
+mother(amalia, maxima). 
 
 husband(bernhard,juliana).
 husband(claus,beatrix).
