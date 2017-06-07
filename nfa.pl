@@ -7,10 +7,10 @@
 
 % example n1 recognizes the language a+ . b+
 %
-example(n1, nfa(0,[trans(0,a,0), trans(0,a,1),trans(1,b,1),trans(1,b,2)], [2]) ).
-
 % example n2 recognizes words that contain aaa or bbb
+example(n1, nfa(0,[trans(0,a,0), trans(0,a,1),trans(1,b,1),trans(1,b,2)], [2]) ).
 %
+
 example(n2, nfa(0,
  [trans(0,a,0),trans(0,a,1),trans(1,a,2),trans(2,a,5),trans(5,a,5),
   trans(0,b,0),trans(0,b,3),trans(3,b,4),trans(4,b,5),trans(5,b,5)],
